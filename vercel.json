@@ -2,14 +2,10 @@
   "version": 2,
   "builds": [
     {
-      "src": "pages/**/*.js",
+      "src": "package.json",
       "use": "@vercel/next"
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/pages/$1"
-    }
-  ]
+  "buildCommand": "next build",
+  "outputDirectory": ".next"
 }
